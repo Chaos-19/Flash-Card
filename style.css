@@ -21,7 +21,8 @@ label{
   margin-bottom: 10px;
 }
 
-.hide{
+.flashAdder.hide,
+.alert.hide{
   display: none;
 }
 .answer.hide{
