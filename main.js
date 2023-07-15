@@ -11,6 +11,14 @@ btnAdd.addEventListener('click', function() {
   cardAdder.classList.remove('hide')
 })
 
+btnDele.addEventListener('click', () => {
+  const cards = [...cardBord.querySelectorAll('.card')];
+
+  cards.forEach(v => {
+    cardBord.removeChild(v);
+  })
+
+})
 
 document.querySelector('#cancel').addEventListener('click', () => { cardAdder.classList.add('hide') });
 
@@ -19,13 +27,13 @@ document.querySelector('#save').addEventListener('click', function() {
   let answer = document.querySelector('#answer').value;
 
   if (question && answer) {
-    
+
     if (!alertMessage.classList.contains('hide')) {
       alertMessage.classList.add('hide');
     }
-    
+
     cardBord.appendChild(createCard(question, answer));
-  }else{
+  } else {
     alertMessage.classList.remove('hide');
   }
 
@@ -65,10 +73,10 @@ function createCard(question, answer) {
     }
   });
 
-innerCard.querySelector('.cancel').addEventListener('click',function(e){
-  const parent = e.target.parentElement;
-  cardBord.removeChild(parent.parentElement);
-})
+  innerCard.querySelector('.cancel').addEventListener('click', function(e) {
+    const parent = e.target.parentElement;
+    cardBord.removeChild(parent.parentElement);
+  })
 
 
   return innerCard;
