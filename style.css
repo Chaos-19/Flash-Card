@@ -21,6 +21,6 @@ label{
 .flashAdder.hide{
   display: none;
 }
-.answer.show{
+.answer.hide{
   visibility: hidden;
 }

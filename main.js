@@ -36,14 +36,19 @@ function createCard(question, answer) {
           <div class="card-body">
             <h5 class="card-title text-start">${question}?</h5>
             <div class="card-text">
-              <p class="text-center py-4 answer show">${answer}</p>
+              <p class="text-center py-4 answer hide">${answer}</p>
             </div>
           </div>
 `
 
-innerCard.addEventListener('click', function(){
-      innerCard.querySelector('p').classList.remove('show');
-       });
+  innerCard.addEventListener('click', function() {
+    const answer = innerCard.querySelector('p');
+    if (answer.classList.contains('hide')) {
+      answer.classList.remove('hide');
+    }else{
+      answer.classList.add('hide');
+    }
+  });
 
 
 
