@@ -12,7 +12,10 @@ btnAdd.addEventListener('click', function() {
 document.querySelector('#cancel').addEventListener('click', () => { cardAdder.classList.add('hide') });
 
 document.querySelector('#save').addEventListener('click', function() {
-
+ let question = document.querySelector('#question');
+ let answer = document.querySelector('#answer');
+ 
+cardBord.appendChild(createCard(question,answer));
 
 })
 
