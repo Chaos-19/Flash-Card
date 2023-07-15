@@ -44,7 +44,10 @@ function createCard(question, answer) {
 
   innerCard.innerHTML = `
         <div class="card-header text-end  border-bottom border-danger">
-         <a href="" class="btn">cancel</a></div>
+       <button type="button" class="btn cancel">
+       X
+        </button>
+         </div>
           <div class="card-body">
             <h5 class="card-title text-start">${question}?</h5>
             <div class="card-text">
@@ -53,7 +56,7 @@ function createCard(question, answer) {
           </div>
 `
 
-  innerCard.addEventListener('click', function() {
+  innerCard.querySelector('.card-body').addEventListener('click', function() {
     const answer = innerCard.querySelector('p');
     if (answer.classList.contains('hide')) {
       answer.classList.remove('hide');
@@ -62,7 +65,10 @@ function createCard(question, answer) {
     }
   });
 
-
+innerCard.querySelector('.cancel').addEventListener('click',function(e){
+  const parent = e.target.parentElement;
+  cardBord.removeChild(parent.parentElement);
+})
 
 
   return innerCard;

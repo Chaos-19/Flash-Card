@@ -28,3 +28,6 @@ label{
 .answer.hide{
   visibility: hidden;
 }
+.cancel{
+  font-size: 25px;
+}
