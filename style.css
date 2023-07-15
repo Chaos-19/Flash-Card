@@ -1,0 +1,26 @@
+.container-lg{
+  background: rgba(255, 255, 255, 0.6);
+}
+.container-fluid{
+  background: rgba(214, 214, 220, 1);
+  height: 100vh ;
+}
+.logo{
+  font-size: 2rem;
+}
+.card{
+  width: 24rem;
+}
+.container-fluid .row{
+  gap: 10px ;
+}
+label{
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.flashAdder.hide{
+  display: none;
+}
+.answer.hide{
+  visibility: hidden;
+}
