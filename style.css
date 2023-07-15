@@ -4,11 +4,13 @@
 .container-fluid{
   background: rgba(214, 214, 220, 1);
   height: 100vh ;
+  overflow-y: scroll;
 }
 .logo{
   font-size: 2rem;
 }
-.card{
+.card,
+.alert{
   width: 24rem;
 }
 .container-fluid .row{
@@ -18,7 +20,8 @@ label{
   font-size: 25px;
   margin-bottom: 10px;
 }
-.flashAdder.hide{
+
+.hide{
   display: none;
 }
 .answer.hide{

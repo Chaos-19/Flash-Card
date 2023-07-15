@@ -5,9 +5,12 @@ const btnDele = document.querySelector('.delet');
 
 const cardAdder = document.querySelector('.flashAdder');
 
+const alertMessage = document.querySelector('.alert');
+
 btnAdd.addEventListener('click', function() {
   cardAdder.classList.remove('hide')
 })
+
 
 document.querySelector('#cancel').addEventListener('click', () => { cardAdder.classList.add('hide') });
 
@@ -15,7 +18,16 @@ document.querySelector('#save').addEventListener('click', function() {
   let question = document.querySelector('#question').value;
   let answer = document.querySelector('#answer').value;
 
-  cardBord.appendChild(createCard(question, answer));
+  if (question && answer) {
+    
+    if (!alertMessage.classList.contains('hide')) {
+      alertMessage.classList.add('hide');
+    }
+    
+    cardBord.appendChild(createCard(question, answer));
+  }else{
+    alertMessage.classList.remove('hide');
+  }
 
 })
 
@@ -45,7 +57,7 @@ function createCard(question, answer) {
     const answer = innerCard.querySelector('p');
     if (answer.classList.contains('hide')) {
       answer.classList.remove('hide');
-    }else{
+    } else {
       answer.classList.add('hide');
     }
   });
